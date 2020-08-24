@@ -1,6 +1,7 @@
 # 1 Analiza kodu źródłowego
 ## 1.1 Co robi ten kod?
 W pliku HttpRequestHandler.cs znajduje się:
+
 Abstakcyjna generyczna klasa HttpRequestHandler z parametrami TRequest, TResponse. 
 - pole _httpClientProxy z referencją obiektu klasy HttpClient
 - właściwość _parser zawierące referencje do obiektu klasy implementującej interfejs IHttpResponseParser<TResponse>. 
