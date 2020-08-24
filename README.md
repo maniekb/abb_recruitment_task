@@ -8,6 +8,7 @@ Abstakcyjna generyczna klasa HttpRequestHandler z parametrami TRequest, TRespons
 - metoda asynchroniczna zwracająca Task<TResponse> Handle(). Zadaniem tej metody jest wysłanie zapytania HTTP i zwrócenie przetworzonej odpowiedzi za pomocą _parser,
    metoda ta jako parametry otrzymuje nazwę metody HTTP, URL, body, ewentualne nagłówki oraz obiekt klasy CancellationToken odpowiedzialny za anulowanie zapytania.
    Na podstawie otrzymanych parametrów metoda tworzy obiekt klasy HttpRequestMessage i poprzez metodę klasy HttpClient.SendAsync() wysyła zapytanie pod podany URL, następnie        otrzymaną odpowiedź parsuje przy użyciu metody ParseAsync() dostępnej w obiekcie _parse. 
+   
 Generyczny interfejs IHttpResponseParser z parametrami TResult.
 - w ramach tego interfejsu mamy metodę ParseAsync() otrzymującą obiekt klasy HttpResponseMessage, zwracającą obiekt typu TResult
 
