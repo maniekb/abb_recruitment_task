@@ -13,7 +13,7 @@ namespace college_interview_task_v4
 
         private static readonly HttpClient _httpClient = new HttpClient();
 
-        protected IHttpResponseParser<TResponse> _parser { get; }
+        private IHttpResponseParser<TResponse> _parser { get; }
 
         protected HttpRequestHandler(IHttpResponseParser<TResponse> parser)
         {
