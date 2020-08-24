@@ -13,7 +13,6 @@ namespace ConsoleApp
             HttpResponseToStringParser parser = new HttpResponseToStringParser();
             DefaultHttpRequestHandler<string> handler = new DefaultHttpRequestHandler<string>(parser);
 
-
             // GET method example
             Console.WriteLine("GET method example:");
             var url1 = "https://jsonplaceholder.typicode.com/posts/1";
@@ -32,6 +31,7 @@ namespace ConsoleApp
             var result2 = await handler.ProcessRequest(url2, HttpMethod.Post, payload);
             Console.WriteLine($"Response: {result2}");
 
+            
             // GET method example with cancellation token
             Console.WriteLine("\n\nGET method example with cancellation token:");
             var url3 = "https://reqres.in/api/users/2";
