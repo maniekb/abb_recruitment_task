@@ -3,7 +3,7 @@
 W pliku HttpRequestHandler.cs znajduje się:
 Abstakcyjna generyczna klasa HttpRequestHandler z parametrami TRequest, TResponse. 
 - pole _httpClientProxy z referencją obiektu klasy HttpClient
-- pole _parser zawierące referencje do obiektu klasy implementującej interfejs IHttpResponseParser<TResponse>. 
+- właściwość _parser zawierące referencje do obiektu klasy implementującej interfejs IHttpResponseParser<TResponse>. 
 - konstruktor przypisujący refernecje do pola _parser.
 - metoda asynchroniczna zwracająca Task<TResponse> Handle. Zadaniem tej metody jest wysłanie zapytania HTTP i zwrócenie przetworzonej odpowiedzi za pomocą _parser,
    metoda ta jako parametry otrzymuje nazwę metody HTTP, URL, ewentualne nagłówki oraz obiekt klasy CancellationToken odpowiedzialny za anulowanie zapytania.
